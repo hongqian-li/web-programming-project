@@ -38,15 +38,11 @@ Include more detailed information about Feature 1 here. Provide links to related
 
 ### Feature 2
 
-Include more detailed information about Feature 2 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
+Hi
 
 ### Feature 3
 
-Julian's Feature!!!
-
-### Feature 4
-
-Create an admin with permissions to modify menus.
+Include more detailed information about Feature 3 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
 
 ---
 
