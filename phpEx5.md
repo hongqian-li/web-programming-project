@@ -25,9 +25,10 @@ A brief description of your web development project.
 
 In this section, list and describe the features or functionality that you are working on. You can use checkboxes to track the progress of each feature.
 
-- [ ] Feature 1 (Full Name): Title of the feature. 
-- [ ] Feature 2 (Full Name): Title of the feature.
-- [ ] Feature 3 (Full Name): Title of the feature.
+- [ ] Feature 1 (Richard Svajdlenka): Reservations 
+- [ ] Feature 2 (Attila Vegh): Career/Applications
+- [ ] Feature 3 (Julian Hack): Gallery picture submission
+- [ ] Feature 4 (Hongqian-li): Menu adjustment/Opening times adjustment 
 
 > Add features as required. 
 
