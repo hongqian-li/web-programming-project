@@ -77,11 +77,13 @@ Create an admin with permissions to modify menus.
 
 List the database tables that are part of your project.
 
-- Table 1 (Created By): Table Name
-- Table 2 (Created By): Table Name
-- Table 3 (Created By): Table Name
+- Table 1 (Richard): Login
+- Table 2 (Richard): Reservation
+- Table 3 (Hongqian Li): Review
+- Table 4 (Attila): Career
+- Table 5 (Attila): Menu
 
-> Include the ER Diagram of the database.
+![ER Diagrams](images/README/ER_Diagram.png)
 
 ---
 
