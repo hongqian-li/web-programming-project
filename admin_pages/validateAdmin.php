@@ -29,9 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($passed) {
             session_start();
-            echo 'correct';
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
+            header("location: adminHome.php");
         } else {
             header("location: admin.php"); // redirect the person back to the login page if something is wrong
         }

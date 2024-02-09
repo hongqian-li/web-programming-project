@@ -1,10 +1,19 @@
 <?php
 session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-    echo "Welcome to the member's area, " . htmlspecialchars($_SESSION['username']) . "!";
+
 } else {
-    echo "Please log in first to see this page.";
+    header("location: admin.php");
+    exit;
 }
+$description = '';
+$keywords = '';
+$title = 'Admin - Example 2';
+include_once 'adminHeader.php';
 ?>
 
-<a href="example1.php"> Other page</a>
+<p>Page 2</p>
+
+<?php
+include_once 'adminFooter.php';
+?>
