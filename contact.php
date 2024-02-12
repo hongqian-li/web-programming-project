@@ -12,6 +12,7 @@ include_once 'header.php';
             <hr class="contact-separator center">
             <p class="description center center-align">
                 <strong>Amici Ristorante</strong> <br>
+                10:00 - 22:00<br>
                 Raatihuoneenkatu 14, <br>
                 13100 Hameenlinna, <br>
                 Finland
