@@ -25,8 +25,37 @@ include_once 'header.php';
             <label for="star" title="star">&#128970;</label>
             <label for="star" title="star">&#128970;</label>
         </h1>
+
+        <?php
+        // Include the database connection file
+        include 'db.php';
+
+        // Query the database to get the average rating
+        $sql = "SELECT AVG(rating) AS average_rating FROM review"; // Assuming ratings are stored in a table named 'review'
+        $result = $conn->query($sql);
+
+        // Handle the result
+        if ($result->num_rows > 0) {
+            // If there are rows in the result set, fetch the average rating
+            $row = $result->fetch_assoc();
+            $averageRating = $row["average_rating"]; 
+        } else {
+            $averageRating = "N/A";
+        }
+        ?>
+
+
+        <?php if ($averageRating !== "N/A"): ?>
+            <div class="average-rating">
+                <h2>Restaurant Rating:
+                    <?php echo number_format($averageRating, 1); ?>
+                </h2>
+            </div>
+        <?php endif; ?>
+
     </div>
     <hr>
+
 
     <!-- Form section -->
     <div class="container">
