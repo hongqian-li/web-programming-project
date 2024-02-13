@@ -26,7 +26,7 @@ if (isset($_POST['logOff'])) {
 
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid" id="main-container">
     <div class="row header">
         <div class="row" id="top-header">
             <div class="col-10">

@@ -11,9 +11,9 @@ $keywords = '';
 $title = 'Admin - Example 2';
 include_once 'adminHeader.php';
 ?>
-
-<p>Page 2</p>
-
+    <div class="content">
+        <p>Page 2</p>
+    </div>
 <?php
 include_once 'adminFooter.php';
 ?>

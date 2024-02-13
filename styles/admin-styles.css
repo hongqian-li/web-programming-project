@@ -167,9 +167,6 @@ body {
 }
 
 #footer {
-    position: fixed;
-    bottom:0;
-    left: 0;
     height: 100px;
     background-image: linear-gradient(var(--secondary-color), var(--main-color));
     color: white;
@@ -186,6 +183,7 @@ body {
 
 .content {
     margin-top: 10px;
+    min-height: 71vh;
 }
 
 .content-title{
@@ -200,6 +198,7 @@ body {
     border:none;
     background: none;
 }
+
 
 
 
