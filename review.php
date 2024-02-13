@@ -9,31 +9,33 @@ include_once 'header.php';
     <div class="our-menu">
 
         <h1 class="menu-heading">Share Your Dining Experience</h1>
-
-        <p>Amici Ristorante is on the hunt for the ultimate top pizza and top pasta, 
-            and we need your help! We're inviting all our valued customers to participate 
-            by selecting their favorite pizza and pasta dishes from our menu. 
-            Your feedback is incredibly important to us, 
-            so please take a moment to share your thoughts about the restaurant and your dining experience. 
-            As a token of our appreciation, participants will have the chance to win exclusive discount vouchers. 
+        <!-- Description of the voting process -->
+        <p>Amici Ristorante is on the hunt for the ultimate top pizza and top pasta,
+            and we need your help! We're inviting all our valued customers to participate
+            by selecting their favorite pizza and pasta dishes from our menu.
+            Your feedback is incredibly important to us,
+            so please take a moment to share your thoughts about the restaurant and your dining experience.
+            As a token of our appreciation, participants will have the chance to win exclusive discount vouchers.
             Join us in shaping the future of Amici Ristorante and enjoy delicious rewards along the way!
         </p>
 
         <h1><label for="star" title="star">&#128970;</label>
-        <label for="star" title="star">&#128970;</label>
-        <label for="star" title="star">&#128970;</label>
-        <label for="star" title="star">&#128970;</label>
-        <label for="star" title="star">&#128970;</label></h1>
+            <label for="star" title="star">&#128970;</label>
+            <label for="star" title="star">&#128970;</label>
+            <label for="star" title="star">&#128970;</label>
+            <label for="star" title="star">&#128970;</label>
+        </h1>
     </div>
     <hr>
 
+    <!-- Form section -->
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <form method="post" action="process.php">
                     <h2 class="text-center mb-4">Vote for Your Top Pizza and Pasta</h2>
 
-
+                    <!-- Name Form fields -->
                     <div class="form-group">
                         <label for="name">Your Name:</label>
                         <input type="text" id="name" name="fname" class="form-control" required minlength="3"
@@ -41,13 +43,14 @@ include_once 'header.php';
                         <span id="nameError" class="text-danger"></span>
                     </div>
 
+                    <!-- Email input field -->
                     <div class="form-group">
                         <label for="email">Your Email:</label>
                         <input type="email" name="email" id="email" class="form-control" required>
                         <span id="emailError" class="text-danger"></span>
                     </div>
 
-
+                    <!-- Select field for pizza options -->
                     <div class="form-group">
                         <label for="pizza">Select your favorite pizza:</label>
                         <select id="pizza" name="pizza" class="form-control" required>
@@ -63,6 +66,7 @@ include_once 'header.php';
                         </select>
                     </div>
 
+                    <!-- Select field for pasta options -->
                     <div class="form-group">
                         <label for="dish">Select your favorite pasta:</label>
                         <select id="dish" name="dish" class="form-control" required>
@@ -81,6 +85,7 @@ include_once 'header.php';
                         </select>
                     </div>
 
+                    <!-- Select field for overall restaurant rating -->
                     <div class="form-group">
                         <label for="overall_rating">Rate Our Restaurant:</label>
                         <select id="overall_rating" name="overall_rating" class="form-control" required>
@@ -93,6 +98,7 @@ include_once 'header.php';
                         </select>
                     </div>
 
+                    <!-- Text area for leaving comments -->
                     <div class="form-group">
                         <label for="comment">Comment:</label>
                         <textarea id="comment" name="comment" class="form-control" required></textarea>
@@ -100,6 +106,7 @@ include_once 'header.php';
                     </div>
                     <br>
 
+                    <!-- Submit button -->
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
@@ -111,11 +118,14 @@ include_once 'header.php';
     <br>
 </body>
 
+
+
 <script>
+    // Function to validate the input name field
     function validateName() {
         const name = document.getElementById("name").value;
         const nameError = document.getElementById("nameError");
-
+        // Check if the length of the name is between 3 and 20 characters
         if (name.length < 3 || name.length > 20) {
             nameError.innerHTML = "Name must be between 3 & 20 characters.";
             return false;
@@ -125,10 +135,11 @@ include_once 'header.php';
         }
     }
 
+    // This function validates the input email field.
     function validateEmail() {
         const email = document.getElementById("email").value;
         const emailError = document.getElementById("emailError");
-
+        // It checks if the email is empty or does not contain the "@" symbol,
         if (email === "" || !email.includes("@")) {
             emailError.innerHTML = "Please enter a valid email address.";
             return false;
@@ -138,23 +149,11 @@ include_once 'header.php';
         }
     }
 
-    function validateEmail() {
-        const email = document.getElementById("email").value;
-        const emailError = document.getElementById("emailError");
-
-        if (email === "" || !email.includes("@")) {
-            emailError.innerHTML = "Please enter a valid email address.";
-            return false;
-        } else {
-            emailError.innerHTML = "";
-            return true;
-        }
-    }
-
+    // This function validates the input comment field.
     function validateComment() {
         const comment = document.getElementById("comment").value;
         const commentError = document.getElementById("commentError");
-
+        // It checks if the comment length is less than 20 characters,
         if (comment.length < 20) {
             commentError.innerHTML = "Comment must be at least 20 characters long.";
             return false;
