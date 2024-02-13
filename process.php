@@ -15,18 +15,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     // Include the database connection file
     include 'db.php';
-
-    // Define an SQL query to insert data into the 'review' table
-    $sql = "INSERT INTO review (name, email, fav_pizza, fav_pasta, rating, comment)
+    $query = "SELECT * FROM review WHERE email='$email'";
+    $queryResult = $conn->query($query);
+    if ($queryResult->num_rows > 0) { // check whether this mail is already in the database
+        echo '<div style="text-align: center; font-size: 24px;">You have already submitted a comment with this email address.</div>';
+    } else {
+        // Define an SQL query to insert data into the 'review' table
+        $sql = "INSERT INTO review (name, email, fav_pizza, fav_pasta, rating, comment)
     VALUES ('$name', '$email', '$pizza', '$pasta', '$rating', '$comment')";
 
-    // Execute the SQL query using the database connection
-    if ($conn->query($sql) === TRUE) {
-        echo '<div style="text-align: center; font-size: 24px;">Thank you for your feedback!</div>';
-    } else {
-        echo '<div style="text-align: center; font-size: 24px;">Error: ' . $sql . '<br>' . $conn->error . '</div>';
+        // Execute the SQL query using the database connection
+        if ($conn->query($sql) === TRUE) {
+            echo '<div style="text-align: center; font-size: 24px;">Thank you for your feedback!</div>';
+        } else {
+            echo '<div style="text-align: center; font-size: 24px;">Error: ' . $sql . '<br>' . $conn->error . '</div>';
+        }
     }
-
     // Close the database connection
     $conn->close();
 }
