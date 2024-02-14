@@ -1,0 +1,258 @@
+@media (max-width: 480px) {
+    /*Smartphone*/
+    body {
+        background-color: var(--primary-color);
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+
+    .header-title {
+        font-size: 55px;
+    }
+
+    #title {
+        padding-left: 0;
+        margin: auto;
+        letter-spacing: 3px;
+    }
+
+    #underline {
+        width: 90%;
+    }
+
+    #footer-center {
+        margin-top: 10px;
+        font-size: 40px;
+        line-height: 0;
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .rowcontent2 {
+        height: auto;
+        margin: 0;
+    }
+
+    .goldline {
+        margin: auto;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .rowcontent {
+        height: auto;
+        margin-top: 0;
+    }
+
+    .rowcontent3 {
+        height: auto;
+        margin: 0;
+    }
+
+    .rowcontent1 {
+        height: auto;;
+        margin-top: 0;
+    }
+
+    .imagecontent {
+        margin-bottom: 20px;
+    }
+
+    .menu-heading {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .menu-subheading {
+        font-size: 23px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .our-menu {
+        padding: 30px 10px;
+    }
+
+    .menu-image {
+        margin-bottom: 20px;
+    }
+
+    .menu-title {
+        text-align: center;
+    }
+
+    .menu-ingredients {
+        text-align: center;
+    }
+
+    .menu-price {
+        text-align: center;
+    }
+
+    .image-container {
+        height: auto;
+    }
+
+    .drinks {
+        height: auto;
+    }
+
+    .heading {
+        font-size: 50px;
+    }
+
+    .form-label {
+        text-align: center;
+    }
+
+    .mb-3 {
+        margin-top: 10px;
+    }
+
+    .career-description {
+        font-size: 16px;
+    }
+
+
+}
+
+@media (min-width: 481px) and (max-width: 1000px) {
+    /*Low-resolution Tablets and Ipads*/
+    body {
+        background-color: var(--primary-color);
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+
+    .header-title {
+        font-size: 55px;
+    }
+
+    #title {
+        padding-left: 0;
+        margin: auto;
+        letter-spacing: 3px;
+    }
+
+    #underline {
+        width: 90%;
+    }
+
+    #footer-center {
+        margin-top: 10px;
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .heading {
+        text-align: center;
+    }
+
+    .rowcontent2 {
+        height: auto;
+        margin-right: 10px;
+
+    }
+
+    .goldline {
+        margin: auto;
+    }
+
+    .description {
+        width: 100%;
+        font-size: 14px;
+
+    }
+
+    .rowcontent {
+        height: auto;
+        margin-top: 0;
+    }
+
+    .rowcontent3 {
+        height: auto;
+        margin: 0;
+    }
+
+    .rowcontent1 {
+        height: auto;;
+        margin-top: 0;
+    }
+
+    .imagecontent {
+        margin-bottom: 0;
+    }
+
+    .menu-heading {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .menu-subheading {
+        font-size: 23px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .our-menu {
+        padding: 30px 10px;
+    }
+
+    .menu-image {
+        margin-bottom: 20px;
+    }
+
+    .menu-title {
+        text-align: center;
+    }
+
+    .menu-ingredients {
+        text-align: center;
+    }
+
+    .menu-price {
+        text-align: center;
+    }
+
+    .image-container {
+        height: auto;
+    }
+
+    .drinks {
+        height: auto;
+    }
+
+    .heading {
+        font-size: 50px;
+    }
+
+    .form-label {
+        text-align: center;
+    }
+
+    .mb-3 {
+        margin-top: 10px;
+    }
+
+    .career-description {
+        font-size: 16px;
+    }
+
+
+}
+
+@media (min-width: 1000px) and (max-width: 1050px) {
+    /*Tablets Ipads portrait mode*/
+    .container-fluid {
+        width: 100%;
+    }
+}
+
