@@ -3,6 +3,25 @@ $title = 'Amici Ristorante - Menu';
 $description = 'The menu of Amici Ristorante restaurant';
 $keywords = 'Italian, Restaurant, Hameenlinna, Cheap, Lunch, Dinner, Food';
 include_once 'header.php';
+include 'db.php';
+
+$pizza_sql = "SELECT * FROM menu WHERE menu_item = 'Pizza'";
+$pasta_sql = "SELECT * FROM menu WHERE menu_item = 'Pasta'";
+$secondi_sql = "SELECT * FROM menu WHERE menu_item = 'Secondi'";
+$dolci_sql = "SELECT * FROM menu WHERE menu_item = 'Dolci'";
+$beverages_sql = "SELECT * FROM menu WHERE menu_item = 'Beverages'";
+$viini_sql = "SELECT * FROM menu WHERE menu_item = 'Viini'";
+
+$pizza_result = $conn->query($pizza_sql);
+$pasta_result = $conn->query($pasta_sql);
+$secondi_result = $conn->query($secondi_sql);
+$dolci_result = $conn->query($dolci_sql);
+$beverages_result = $conn->query($beverages_sql);
+$viini_result = $conn->query($viini_sql);
+
+
+
+
 ?>
     <!--Content-->
 
@@ -31,54 +50,17 @@ include_once 'header.php';
         </div>
         <div class="col-sm-6">
             <h2 class="center-align" id="pizza">PIZZA</h2>
-            <div class="menu-list">
+<?php
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "<div class="menu-list">
                 <div class="menu-item">
                     <div class="menu-title">Margherita di bufala</div>
                     <div class="menu-ingredients">Tomato sauce, buffalo mozzarella, basil oil & fresh basil</div>
                     <div class="menu-price">€16</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Diavola</div>
-                    <div class="menu-ingredients">Tomato sauce, mozzarella, salami & chives</div>
-                    <div class="menu-price">€18</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Prosciutto cotto con funghi</div>
-                    <div class="menu-ingredients">Tomato sauce, mozzarella, mushrooms, ham & fresh basil</div>
-                    <div class="menu-price">€20</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Funghi</div>
-                    <div class="menu-ingredients">Creamy mushroom sauce, mozzarella, mushrooms, parmesan & truffle oil
-                    </div>
-                    <div class="menu-price">€21</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Parma con rucola</div>
-                    <div class="menu-ingredients">Tomato sauce, mozzarella, arugula & Parma prosciutto Available with
-                        buffalo mozzarella for an additional €5
-                    </div>
-                    <div class="menu-price">€18</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Pear & Gorgonzola</div>
-                    <div class="menu-ingredients">White sauce, mozzarella, gorgonzola, pear, honey & walnuts</div>
-                    <div class="menu-price">€18</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Siciliana</div>
-                    <div class="menu-ingredients">House tomato sauce, mozzarella, anchovies, olives, pumpkin, basil &
-                        basil olive oil
-                    </div>
-                    <div class="menu-price">€17</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title">Pizza di manzo con porcini</div>
-                    <div class="menu-ingredients">Light sauce, mozzarella, mushrooms, beef tenderloin (fin), cherry
-                        tomatoes & truffle oil
-                    </div>
-                    <div class="menu-price">€18</div>
-                </div>
+                </div>";
+        }
+    }
             </div>
         </div>
     </div>

@@ -15,6 +15,7 @@ $pageName = basename($currentPage);
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/scale_styles.css">
+    <link rel="stylesheet" href="styles/Galeryform.css">
 </head>
 <body>
 <div class="container-fluid">
