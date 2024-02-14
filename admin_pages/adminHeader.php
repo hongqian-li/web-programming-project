@@ -56,7 +56,7 @@ if (isset($_POST['logOff'])) {
                                 <a class="nav-link <?php if ($pageName == 'adminHome.php') {echo 'active';}?>" aria-current="page" href="adminHome.php">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?php if ($pageName == 'example2.php') {echo 'active';}?>" href="example2.php">Example 2</a>
+                                <a class="nav-link <?php if ($pageName == 'adminReservations.php') {echo 'active';}?>" href="adminReservations.php">Reservations</a>
                             </li>
                     </div>
                 </nav>

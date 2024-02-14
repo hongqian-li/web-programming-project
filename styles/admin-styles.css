@@ -184,6 +184,8 @@ body {
 .content {
     margin-top: 10px;
     min-height: 71vh;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .content-title{
@@ -198,7 +200,3 @@ body {
     border:none;
     background: none;
 }
-
-
-
-

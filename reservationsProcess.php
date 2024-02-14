@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
 
         $_SESSION['emailTaken'] = true;
 
+
     } else {
         // Define an SQL query to insert data into the 'studentsinfo' table
         $sql = "INSERT INTO reservation (name, email, reservation_date, reservation_time, person_num, extra_info)
@@ -27,7 +28,9 @@ if (isset($_POST['submit'])) {
         // Execute the SQL query using the database connection
         if ($conn->query($sql) === TRUE) {
             // If the query was successful, display a success message
-
+            $result =mysqli_query($conn, "SELECT * FROM reservation WHERE email='$email'");
+            $row= mysqli_fetch_array($result);
+            $_SESSION['reservation-id'] = $row['id'];
         } else {
             // If there was an error in the query, display an error message
             echo "Error: " . $sql . "<br>" . $conn->error;
