@@ -3,55 +3,83 @@ $title = 'Amici Ristorante - Career';
 $description = 'The page for applications for Amici Ristorante restaurant';
 $keywords = 'Italian, Restaurant, Hameenlinna, Cheap, Lunch, Dinner, Career, Work, Jobs';
 include_once 'header.php';
-?>
-    <!--Content-->
-    <h1 class="heading center-align">Current career opportunities</h1> <br>
-    <div class= "row">
-    <div class="col-sm-3">  <!--list the db rows-->
-    <ul class="list">
-                <li class="list-row">
-                    <a class="career-link" href="#"><h3>$title</h3></a>
-                    <p>$employment, $starting_date</p>
+include 'db.php';
+
+// SQL query to retrieve data from the 'career' table
+$sql = "SELECT * FROM career";
+
+// Execute the SQL query and store the result
+$result = $conn->query($sql);
+
+// Check if there are any results
+    if ($result->num_rows > 0) {
+        echo "
+            <h1 class='heading center-align'>Current career opportunities</h1> <br>
+            <div class= 'row'>
+            <div class='col-sm-3'>  
+            <ul class='list'>";
+            while ($row = $result->fetch_assoc()) {
+                    echo "<a class='career-link' href='career.php?opencareer={$row['id']}'><li class='list-row'><h3>{$row['title']}</h3></a>
+                    <div class='row'>
+                    <div class='col-sm-4 list-footer-left'>
+                    <p>{$row['employment']}</p></div>
+                    <div class='col-sm-8 list-footer-right'>
+                    <p>Starting date: {$row['starting_date']}</p></div>
+                    </div>
                     <hr>
-                </li>
-                <li class="list-row">
-                    <a class="career-link" href="#"><h3>Cleaning staff</h3></a>
-                    <p>Full-time or part-time, ASAP</p>
-                    <hr>
-                </li>
-                <li class="list-row">
-                    <a class="career-link" href="#"><h3>Assistant shift manager</h3></a>
-                    <p>Full-time, from February</p>
-                </li>
-            </ul>
-    </div>
-    <div class="col-sm-9 center">  <!--show the database row, including the description-->
-            <h2 class="center-align">$title</h2> <br>
-            <span class="employment">Employment type: $employment</span> <br>
-            <span class="starting">Starting date: $starting_date</span> <br>
-            <span class="location">Location: $location</span> <br>
-            <span class="salary">Salary: $salary €/hour</span> <br>
-            <span class="contactinfo">Person of contact: $contactinfo</span> <br> <br>
-            <h2>Description</h2>
-            <p class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laborum consectetur provident aperiam? Laborum tempora, molestias earum repellat alias distinctio cum deleniti perspiciatis doloribus, vero doloremque impedit numquam maxime commodi! <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laborum consectetur provident aperiam? Laborum tempora, molestias earum repellat alias distinctio cum deleniti perspiciatis doloribus, vero doloremque impedit numquam maxime commodi! <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laborum consectetur provident aperiam? Laborum tempora, molestias earum repellat alias distinctio cum deleniti perspiciatis doloribus, vero doloremque impedit numquam maxime commodi! <br>
-            </p>
+                    ";
+            } 
+         echo "</ul>";
+    }
+    else {
+        echo "<br>
+        <h1 class='heading center-align'>Sorry, Currently there are no job openings</h1>
+        <br>";
+    }
+$conn->close();
 
+include 'db.php';
+// Check if the variable is set in the URL
+    if (isset($_GET['opencareer'])) {
 
+// Get the value of the variable from the URL
+        $open_career = $_GET['opencareer'];
 
+// SQL query to retrieve data from the 'career' table
+        $second_sql = "SELECT * FROM career WHERE id = '$open_career'";
 
-
-    </div>
+// Execute the SQL query and store the result
+        $second_result = $conn->query($second_sql);
+        
+        if ($second_result->num_rows > 0) {
+       
+//show the database row, including the description
+            while ($second_row = $second_result->fetch_assoc()) { 
+                echo "   </div>
+                            <div class='col-sm-9'> 
+                            <h2 class='center-align'>{$second_row['title']}</h2> <br>
+                            <span class='employment'>Employment type: {$second_row['employment']}</span> <br>
+                            <span class='starting'>Starting date: {$second_row['starting_date']}</span> <br>
+                            <span class='location'>Location: {$second_row['location']}</span> <br>
+                            <span class='salary'>Salary: {$second_row['salary']} €/hour</span> <br>
+                            <span class='contactinfo'>Person of contact: {$second_row['contactinfo']}</span> <br> <br>
+                            <h2>Description</h2>
+                            <p class='description'>
+                            {$second_row['description']}
+                            </p>
+                        </div>";
+                        }
+        }
+            $conn->close();}?>
     </div>
 <br>
-        <div class="row">
+    <div class="row">
         <div class="col-sm-4">  
         <img src="images/career/barstaff.jpg" alt="career opportunities" class="center">
         </div> 
-            <div class="col-sm-8 center-align">
-            <p class="career-description">Welcome to a culinary journey where passion meets expertise! <br>Join our team
+        
+        <div class="col-sm-8 center">
+            <p class="career-description ">Welcome to a culinary journey where passion meets expertise! <br>Join our team
                 at Amici Ristorante, where we
                 celebrate the art of gastronomy, creating memorable experiences through exceptional food and warm
                 hospitality. <br>
@@ -61,7 +89,7 @@ include_once 'header.php';
             </div>
         </div>
     </div>
-
+<br>
 
 <?php
 include_once 'footer.php';
