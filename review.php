@@ -61,7 +61,7 @@ include_once 'header.php';
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form method="post" action="process.php">
+                <form method="post" action="review_process.php">
                     <h2 class="text-center mb-4">Vote for Your Top Pizza and Pasta</h2>
 
                     <!-- Name Form fields -->
