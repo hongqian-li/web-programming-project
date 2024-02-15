@@ -17,7 +17,7 @@ if (isset($_SESSION['deletedReservation']) && $_SESSION['deletedReservation'] ==
 
 $description = '';
 $keywords = '';
-$title = 'Admin - Example 2';
+$title = 'Admin - Reservations';
 include_once 'adminHeader.php';
 ?>
 

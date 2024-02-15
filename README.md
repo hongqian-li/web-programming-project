@@ -81,7 +81,7 @@ List the database tables that are part of your project.
 - Table 2 (Richard): Reservation
 - Table 3 (Hongqian Li): Review
 - Table 4 (Attila): Career
-- Table 5 (Attila): Menu
+- Table 5 (Julian): Menu
 
 ![ER Diagrams](images/README/ER_Diagram.png)
 
@@ -92,12 +92,15 @@ List the database tables that are part of your project.
 List and describe any forms that have been created as part of your project. Include details about the purpose of each
 form and any validation logic.
 
-- Form 1 (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). |
-  Validations Applied
-- Form 2: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). |
-  Validations Applied
-- Form 3: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). |
-  Validations Applied
+- Form 1 (Richard): Reservations: [GitHub](https://github.com/hongqian-li/web-programming-project/blob/main/reservations.php) | [Shell](http://shell.hamk.fi/~bbcap23_10/Web_programming/reservations.php)
+  - Name must be certain length
+  - email must be valid
+  - Cannot select time that has passed
+  - Cannot select negative or zero as number of people
+- Form 2: (Created By): Reservation cancel: [GitHub](https://github.com/hongqian-li/web-programming-project/blob/main/reservations.php) | [Shell](http://shell.hamk.fi/~bbcap23_10/Web_programming/reservations.php)
+- Form 3: (Hongqian Li): Review: [GitHub](https://github.com/hongqian-li/web-programming-project/blob/main/review.php) | [Shell](http://shell.hamk.fi/~bbcap23_10/Web_programming/review.php)
+- Form 4 (Attila) Add career listing: [GitHub](https://github.com/hongqian-li/web-programming-project/blob/main/admin_pages/careerform.php) | [Shell](http://shell.hamk.fi/~bbcap23_10/Web_programming/admin_pages/careerform.php) (Requires login)
+- Form 5 (Julian) Add menu item: [GitHub](https://github.com/hongqian-li/web-programming-project/blob/main/admin_pages/menuform.php) | [Shell](http://shell.hamk.fi/~bbcap23_10/Web_programming/admin_pages/menuform.php)
 
 ---
 
@@ -105,14 +108,7 @@ form and any validation logic.
 
 List any tables that you have created in the project work
 
-- Table 1 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
-- Table 2 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
-- Table 3 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
-
----
-
-
-
-> Feel free to customize this README template to suit your project's specific needs. Providing clear and organized
-> documentation will help your team members understand the project's progress and tasks effectively. This document will
-> have a significant impact on the grading. 
+- Table 1 (Richard): Reservations | [GitHub](https://github.com/hongqian-li/web-programming-project/blob/main/admin_pages/adminReservations.php) | [Shell](http://shell.hamk.fi/~bbcap23_10/Web_programming/admin_pages/adminReservations.php) (Requires Login)
+- Table 2 (Attila): Career | [GitHub](https://github.com/hongqian-li/web-programming-project/blob/main/admin_pages/careerread.php) | [Shell](http://shell.hamk.fi/~bbcap23_10/Web_programming/admin_pages/careerread.php) (Requires Login)
+- Table 3 (Hongqian Li): Review | [GitHub](https://github.com/hongqian-li/web-programming-project/blob/main/admin_pages/review_read.php) | [Shell](http://shell.hamk.fi/~bbcap23_10/Web_programming/admin_pages/review_read.php) (Requires Login)
+- Table 4 (Julian): Menu | [GitHub](https://github.com/hongqian-li/web-programming-project/blob/main/menu.php) | [Shell](http://shell.hamk.fi/~bbcap23_10/Web_programming/menu.php)
