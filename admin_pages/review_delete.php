@@ -1,18 +1,18 @@
-<?php 
-include "adminHeader.php";
+<?php
+session_start();
 include "adminDb.php";
 $id = $_GET['id'];
 //query : delete where Staff_id = $id
 // on success delete : redirect the page to original page using header() method
 // sql to delete a record
-$sql = "DELETE FROM review WHERE id = $id"; 
-echo $id;
+$sql = "DELETE FROM review WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
-    mysqli_close($conn);
-    header('Location: review_read.php');
-    exit;
+    $_SESSION['reviewDeleted'] = true;
 } else {
-    echo "Error deleting record";
+    $_SESSION['reviewDeleted'] = false;
+    $_SESSION['reviewDeletedError'] = $conn->error;
 }
-include "adminFooter.php";
+
+header('Location: review_read.php');
+mysqli_close($conn);
 ?>

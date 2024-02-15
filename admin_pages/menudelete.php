@@ -1,18 +1,19 @@
 <?php 
-include "adminHeader.php";
+session_start();
 include "adminDb.php";
 $id = $_GET['id'];
 //query : delete where Staff_id = $id
 // on success delete : redirect the page to original page using header() method
 // sql to delete a record
 $sql = "DELETE FROM menu WHERE id = $id"; 
-echo $id;
+
 if (mysqli_query($conn, $sql)) {
-    mysqli_close($conn);
-    header('Location: menuread.php');
-    exit;
+    $_SESSION['menuDeleted'] = true;
 } else {
-    echo "Error deleting record";
+    $_SESSION['menuDeleted'] = false;
+    $_SESSION['menuDeletedError'] = $conn->error;
 }
-include "adminFooter.php";
+
+header('Location: menuread.php');
+mysqli_close($conn);
 ?>

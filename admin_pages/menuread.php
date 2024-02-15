@@ -7,6 +7,18 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     header("location: admin.php");
     exit;
 }
+
+if (isset($_SESSION['menuDeleted']) && $_SESSION['menuDeleted'] == true) {
+    echo "<script>alert('Successfully deleted data from the database!')</script>";
+    unset($_SESSION['menuDeleted']);
+} else if (isset($_SESSION['menuDeleted'])) {
+    $error = $_SESSION['menuDeletedError'];
+    echo "<script>alert('Couldn\'t delete data from the database! {$error}')</script>";
+    unset($_SESSION['menuDeleted']);
+    unset($_SESSION['menuDeletedError']);
+}
+
+
 include 'adminHeader.php';
 //connecting to database
 include "adminDb.php";

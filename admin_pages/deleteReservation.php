@@ -5,11 +5,11 @@ $id = $_GET['id'];
 $query = mysqli_query($conn, "DELETE FROM reservation where id='$id'");
 if ($query) {
     $_SESSION['deletedReservation'] = true;
-    header("location: adminReservations.php");
+
 } else {
     $_SESSION['deletedReservation'] = true;
 }
 
-
+header("location: adminReservations.php");
 $conn->close();
 ?>
