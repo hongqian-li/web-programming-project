@@ -49,6 +49,7 @@ $pageName = basename($currentPage);
                                 <a class="nav-link <?php if ($pageName == 'reservations.php') {echo 'current-tab';}?>" href="reservations.php">Reservations</a>
                                 <a class="nav-link <?php if ($pageName == 'contact.php') {echo 'current-tab';}?>" href="contact.php">Contact</a>
                                 <a class="nav-link <?php if ($pageName == 'career.php') {echo 'current-tab';}?>" href="career.php">Career</a>
+                                <a class="nav-link <?php if ($pageName == 'review.php') {echo 'current-tab';}?>" href="review.php">Review</a>
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,9 @@
 <?php
 
-$servername = "localhost";
-$username   = "bbcap23_10";
-$password   = "LBWnL1aI";
-$dbname     = "wp_bbcap23_10";
+$servername = "php24-db-1";
+$username = "team_project";
+$password = "editorMasta";
+$dbname = "team_project";
 
 //create database connection
 

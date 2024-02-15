@@ -58,6 +58,9 @@ if (isset($_POST['logOff'])) {
                             <li class="nav-item">
                                 <a class="nav-link <?php if ($pageName == 'adminReservations.php') {echo 'active';}?>" href="adminReservations.php">Reservations</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link <?php if ($pageName == 'adminReservations.php') {echo 'active';}?>" href="adminReservations.php">Reservations</a>
+                            </li>
                     </div>
                 </nav>
             </div>
