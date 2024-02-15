@@ -11,7 +11,7 @@ include 'adminHeader.php';
 //connecting to database
 include "adminDb.php";
 // SQL query to retrieve data from the 'career' table
-$sql = "SELECT * FROM menu";
+$sql = "SELECT * FROM menu ORDER BY 'category'";
 // Execute the SQL query and store the result
 $result = $conn->query($sql);
 // Check if there are any results
