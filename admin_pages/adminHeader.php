@@ -26,7 +26,7 @@ if (isset($_POST['logOff'])) {
 
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid" id="main-container">
     <div class="row header">
         <div class="row" id="top-header">
             <div class="col-10">
@@ -53,10 +53,29 @@ if (isset($_POST['logOff'])) {
                     <div class="container-fluid">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link <?php if ($pageName == 'adminHome.php') {echo 'active';}?>" aria-current="page" href="adminHome.php">Home</a>
+                                <a class="nav-link <?php if ($pageName == 'adminHome.php') {
+                                    echo 'active';
+                                } ?>" aria-current="page" href="adminHome.php">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link <?php if ($pageName == 'example2.php') {echo 'active';}?>" href="example2.php">Example 2</a>
+                                <a class="nav-link <?php if ($pageName == 'adminReservations.php') {
+                                    echo 'active';
+                                } ?>" href="adminReservations.php">Reservations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link <?php if ($pageName == 'careerread.php' || $pageName == 'careerform.php') {
+                                    echo 'active';
+                                } ?>" href="careerread.php">Career</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link <?php if ($pageName == 'menuform.php' || $pageName == 'menuread.php') {
+                                    echo 'active';
+                                } ?>" href="menuform.php">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link <?php if ($pageName == 'review_read.php') {
+                                    echo 'active';
+                                } ?>" href="review_read.php">Review</a>
                             </li>
                     </div>
                 </nav>

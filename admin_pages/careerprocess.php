@@ -1,5 +1,6 @@
 <?php
-include 'adminHeader.php';
+session_start();
+
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $description = $_POST['description'];
@@ -17,13 +18,15 @@ $sql = "insert into career(title, description, salary, contactinfo, employment, 
         values ('$title', '$description', '$salary', '$contactinfo', '$employment', '$starting_date', '$location')";
 
 if ($conn->query($sql)===TRUE)  {
-    echo "Your data was recorded";
+    $_SESSION['addedCareer'] = true;
 }
 else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+    $_SESSION['addedCareer'] = false;
+    $_SESSION['addedCareerError'] = $conn -> error;
 
+}
+header("location:careerform.php");
 $conn->close();
 }
-include 'adminFooter.php';
+
 ?>
