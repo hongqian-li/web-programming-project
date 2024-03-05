@@ -31,9 +31,9 @@ In this section, list and describe the features or functionality that you are wo
 track the progress of each feature.
 
 - [ ] Feature 1 (Richard Svajdlenka): Reservations
-- [ ] Feature 2 (Attila Vegh): Career/Applications
+- [ ] Feature 2 (Hongqian-li): Review Page
 - [ ] Feature 3 (Julian Hack): Gallery picture submission
-- [ ] Feature 4 (Hongqian-li): Menu adjustment/Opening times adjustment
+- [ ] Feature 4 (Attila Vegh): Career/Applications
 
 ### Feature 1
 
@@ -61,7 +61,22 @@ account on the site. A table of reservations will be shown with buttons to delet
 
 ### Feature 2
 
-Hi!
+We have created a new page for the restaurant to conduct marketing campaigns. This page requires customers to provide feedback on the restaurant and select their favorite Italian pizza and pasta.
+
+The form includes the following options:
+
+ - Your Name (Name must be between 3 & 20 characters.)Required*
+ - Your Email (Please enter a valid email address.)Required*
+ - Select your favorite pizza (Select 1 from a menu of 10 pizzas, presented as a dropdown menu, Required*)
+ - Select your favorite pasta (Select 1 from a menu of 10 pastas, presented as a dropdown menu, Required*)
+ - Rate Our Restaurant (Select from a dropdown menu with five stars)
+ - Comment (Comment must be at least 20 characters long.)
+
+Additionally, this page will calculate the average restaurant rating based on the star ratings provided by customers and data from the database.
+
+**Things to keep in mind:**
+ - Feedback with duplicate email addresses can only be submitted once. If an email address that already exists in the database is entered, the webpage will prompt you to use a different email address.
+ - The admin interface allows administrators to delete and manage data that is already stored in the database.
 
 ### Feature 3
 
