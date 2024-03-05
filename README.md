@@ -65,12 +65,12 @@ We have created a new page for the restaurant to conduct marketing campaigns. Th
 
 The form includes the following options:
 
- - Your Name (Name must be between 3 & 20 characters.)Required*
- - Your Email (Please enter a valid email address.)Required*
+ - Your Name (Name must be between 3 & 20 characters.) Required*
+ - Your Email (Please enter a valid email address.) Required*
  - Select your favorite pizza (Select 1 from a menu of 10 pizzas, presented as a dropdown menu, Required*)
  - Select your favorite pasta (Select 1 from a menu of 10 pastas, presented as a dropdown menu, Required*)
- - Rate Our Restaurant (Select from a dropdown menu with five stars)
- - Comment (Comment must be at least 20 characters long.)
+ - Rate Our Restaurant (Select from a dropdown menu with five stars) Required*
+ - Comment (Comment must be at least 20 characters long.) Required*
 
 Additionally, this page will calculate the average restaurant rating based on the star ratings provided by customers and data from the database.
 
