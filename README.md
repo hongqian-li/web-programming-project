@@ -84,7 +84,9 @@ Julian's Feature!!!
 
 ### Feature 4
 
-Create an admin with permissions to modify menus.
+Career page
+
+Now the career page reads from the database. There was an editing page added as well to the admin site, where new career postings can be added or deleted. Before this feature if a new job posting needed to be added it had to be through coding it in to the HTML file. 
 
 ---
 
